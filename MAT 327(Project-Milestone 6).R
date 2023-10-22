@@ -1,0 +1,6 @@
+library(readr)
+temp <- read_csv("temp.csv")
+View(temp)
+plot(temp$actual_min_temp,temp$actual_max_temp)
+plot(temp$actual_min_temp,temp$actual_max_temp, xlab = "Actual min temp", ylab = "Actual max temp", main = "Temperature changes")
+cor(temp$actual_min_temp,temp$actual_max_temp)
