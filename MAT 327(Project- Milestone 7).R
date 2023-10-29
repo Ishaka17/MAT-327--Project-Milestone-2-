@@ -1,0 +1,8 @@
+library(readr)
+temp <- read_csv("temp.csv")
+View(temp)
+mean(temp$average_min_temp)
+sd(temp$average_min_temp)
+qnorm(0.05/2)
+mean(temp$average_max_temp)
+sd(temp$average_max_temp)
