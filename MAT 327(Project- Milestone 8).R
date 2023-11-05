@@ -1,0 +1,10 @@
+library(readr)
+temp <- read_csv("temp.csv")
+View(temp)
+temp.lm <- lm(record_max_temp ~ record_max_temp_year, data = temp)
+temp.lm
+summary(temp.lm)
+hist(resid(temp.lm))
+hist(resid(temp.lm), xlab = "Residual", ylab = "Frequency", main = "Temperature data residuals")
+plot(temp$record_max_temp,resid(temp.lm))
+plot(temp$record_max_temp,resid(temp.lm), xlab ="Record max temp", ylab = "Residual", main = "Observed response vs. residual")
