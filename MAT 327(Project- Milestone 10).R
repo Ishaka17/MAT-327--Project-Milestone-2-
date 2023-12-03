@@ -1,0 +1,6 @@
+library(readr)
+temp <- read_csv("temp.csv")
+View(temp)
+plot(record_max_temp ~ average_max_temp, data = temp)
+plot(temp$average_max_temp, temp$record_max_temp, xlab = "Average maximum temperature", ylab = "Record maximum temperature", main = "Correlation of temperature data")
+cor(temp$record_max_temp, temp$average_max_temp)
